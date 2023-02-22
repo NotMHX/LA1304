@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <title>Add Site [MiniLink]</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="headerTitle">MiniLink - Add Site</h1>
+      <p class="headerDesc">
+        Here you can add a new site to MiniLink. We check automatically if the
+        website exists and there's no duplicate.
+      </p>
+    </header>
+    <main>
+      <div class="section">
+        <p class="sectionDesc">Page URL</p>
+        <input class="sectionInput" type="text" minlength="8" />
+      </div>
+      <div class="section">
+        <button
+          class="sectionBtn"
+          onclick="window.location.href='./index.html';"
+        >
+          Cancel
+        </button>
+        <button class="sectionBtn">Check & Add</button>
+      </div>
+    </main>
+  </body>
+</html>

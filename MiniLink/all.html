@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <title>All Sites [MiniLink]</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="headerTitle">MiniLink - All Sites</h1>
+      <p class="headerDesc">
+        Here's a list of all sites. You can visit them, delete them, or add a
+        new site.
+      </p>
+    </header>
+    <main>
+      <div class="section">
+        <ul class="sectionBox">
+          <li>DuckDuckGo - Privacy, simplified.</li>
+          <li><img src=./img/calendar.png alt="Date Added">01/01/1990</li>
+          <li>
+            <img src=./img/link.png alt="Link"><a
+              href="https://duck.com"
+              target="_blank"
+              >duck.com</a
+            >
+          </li>
+          <li><button id="selectionBtnDel1">Delete</button></li>
+        </ul>
+      </div>
+      <div class="section">
+        <button
+          class="sectionBtn"
+          onclick="window.location.href='./index.html';"
+        >
+          Home
+        </button>
+        <button class="sectionBtn" onclick="window.location.href='./add.html';">
+          Add Site
+        </button>
+      </div>
+    </main>
+  </body>
+</html>

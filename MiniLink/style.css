@@ -31,18 +31,21 @@ header {
 }
 
 .section {
-  margin: 5rem;
+  margin: 6rem;
   text-align: center;
 }
 
-.sectionSearch {
-  font-size: 2rem;
-  height: 3rem;
-  width: 30%;
+.sectionSearch,
+.sectionInput {
+  font-size: 2.5rem;
+  height: 3.5rem;
+  width: 40%;
+  border-radius: 5px;
 }
 
 .sectionTitle {
   font-size: 2rem;
+  font-weight: bold;
 }
 
 .sectionDesc {
@@ -51,7 +54,7 @@ header {
 
 .sectionBtn {
   width: 20%;
-  height: 3rem;
+  height: 4rem;
   background-color: white;
   font-weight: bold;
   font-size: 1.7rem;
@@ -67,7 +70,7 @@ header {
   border-color: black;
   border: 0.2rem solid black;
   padding: 1rem 5%;
-  margin: 0 20%;
+  margin: 0.5rem 20%;
   width: 50%;
 }
 .sectionBox a {
@@ -78,7 +81,40 @@ header {
   font-size: 1.5rem;
   margin: 0.5rem 0;
 }
+.sectionBox a:hover {
+  color: aqua;
+}
 .sectionBox img {
   width: 1.7rem;
   padding: 0 1rem 0 0;
+}
+.sectionBox button {
+  font-weight: bold;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 4rem;
+  background-color: #282828;
+  padding: 1rem;
+  text-align: center;
+}
+
+.footerDesc {
+  font-size: 1.25rem;
+  display: inline;
+}
+
+.footerLink {
+  font-size: 1.75rem;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  margin-left: 1.25rem;
+}
+.footerLink:hover {
+  text-decoration: underline;
+  color: aqua;
 }

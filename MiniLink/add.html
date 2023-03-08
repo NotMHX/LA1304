@@ -17,8 +17,14 @@
     </header>
     <main>
       <div class="section">
-        <p class="sectionDesc">Page URL</p>
-        <input class="sectionInput" type="text" minlength="8" />
+        <p class="sectionTitle">Page URL</p>
+        <input
+          class="sectionInput"
+          type="text"
+          id="websiteInput"
+          minlength="8"
+          placeholder="https://link.com"
+        />
       </div>
       <div class="section">
         <button
@@ -27,8 +33,18 @@
         >
           Cancel
         </button>
-        <button class="sectionBtn">Check & Add</button>
+        <button class="sectionBtn" onclick="checkSite()">Check & Add!</button>
       </div>
+      <script src="javascript/addSite.js"></script>
     </main>
+    <footer>
+      <p class="footerDesc">Made by Michael, Luca and Dominik for LA1304</p>
+      <a
+        href="https://github.com/NotMHX/LA1304"
+        class="footerLink"
+        target="_blank"
+        >Source Code</a
+      >
+    </footer>
   </body>
 </html>

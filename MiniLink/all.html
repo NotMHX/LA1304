@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="./style.css" />
     <title>All Sites [MiniLink]</title>
   </head>
-  <body>
+  <body onload="fetchSites()">
     <header>
       <h1 class="headerTitle">MiniLink - All Sites</h1>
       <p class="headerDesc">
@@ -16,20 +16,7 @@
       </p>
     </header>
     <main>
-      <div class="section">
-        <ul class="sectionBox">
-          <li>DuckDuckGo - Privacy, simplified.</li>
-          <li><img src=./img/calendar.png alt="Date Added">01/01/1990</li>
-          <li>
-            <img src=./img/link.png alt="Link"><a
-              href="https://duck.com"
-              target="_blank"
-              >duck.com</a
-            >
-          </li>
-          <li><button id="selectionBtnDel1">Delete</button></li>
-        </ul>
-      </div>
+      <div class="section" id="websiteList"></div>
       <div class="section">
         <button
           class="sectionBtn"
@@ -38,9 +25,10 @@
           Home
         </button>
         <button class="sectionBtn" onclick="window.location.href='./add.html';">
-          Add Site
+          Add Site!
         </button>
       </div>
+      <script src="./javascript/listSites.js"></script>
     </main>
   </body>
 </html>

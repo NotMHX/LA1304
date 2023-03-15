@@ -11,7 +11,7 @@ async function fetchSites(page) {
       listSites(json);
       break;
     case "index":
-      listLatest(json[json.length - 1]);
+      listLatest(json);
       break;
     case "search":
       listSearch(json);
@@ -76,9 +76,10 @@ function listSites(webList) {
 }
 
 function listLatest(website) {
+  const latestElement = website[website.length - 1];
   const entry = document.getElementById("latestSite");
-  entry.href = website.weblink;
-  entry.innerHTML = splitLink(website.weblink);
+  entry.href = latestElement.weblink;
+  entry.innerHTML = splitLink(latestElement.weblink);
 }
 
 function deleteSite(website) {

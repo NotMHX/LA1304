@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="./style.css" />
     <title>Home [MiniLink]</title>
   </head>
-  <body>
+  <body onload="fetchSites('index')">
     <header>
       <h1 class="headerTitle">MiniLink - The small link directory</h1>
       <p class="headerDesc">
@@ -33,11 +33,11 @@
         <h3 class="sectionTitle">Recently added</h3>
         <ul class="sectionBox">
           <li>
-            <a href="https://duck.com" target="_blank">Test entry.</a>
+            <a id="latestSite" target="_blank">Loading...</a>
           </li>
         </ul>
       </div>
-      <!-- <script src="./javascript/app.js"></script> -->
+      <script src="./javascript/listSites.js"></script>
     </main>
     <footer>
       <p class="footerDesc">Made by Michael, Luca and Dominik for LA1304</p>

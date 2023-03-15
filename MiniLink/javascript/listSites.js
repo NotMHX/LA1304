@@ -1,11 +1,28 @@
-async function fetchSites() {
+async function fetchSites(page) {
   const response = await fetch("../websites.json");
+  // replace this with the database
   await console.log("fetch successful");
   const json = await response.json();
   await console.log("conversion successful");
   console.log(json);
-  listSites(json);
+
+  switch (page) {
+    case "all":
+      listSites(json);
+      break;
+    case "index":
+      listLatest(json);
+      break;
+    case "search":
+      listResults(json);
+      break;
+    default:
+      console.log("Not a valid page.");
+      break;
+  }
 }
+
+function listResults(webList) {}
 
 function listSites(webList) {
   const websiteContainer = document.getElementById("websiteList");
@@ -30,8 +47,7 @@ function listSites(webList) {
     console.log(`Created date ${webList[e].created}`);
     list.append(websiteAdded);
 
-    let linkText =
-      webList[e].weblink.split(".")[1] + "." + webList[e].weblink.split(".")[2];
+    let linkText = splitLink(webList[e].weblink);
     // splits link to make a name (eg. https://www.test.com/main -> test.com/main)
 
     // link
@@ -44,7 +60,7 @@ function listSites(webList) {
     let websiteDelete = document.createElement("li");
     let deleteBtn = document.createElement("button");
     deleteBtn.innerHTML = "Delete";
-    deleteBtn.onclick = `deleteSite(${e})`;
+    deleteBtn.addEventListener("click", () => deleteSite(webList[e]));
     websiteDelete.append(deleteBtn);
     list.append(websiteDelete);
   }
@@ -58,7 +74,20 @@ function listSites(webList) {
   }
 }
 
-function deleteSite(index) {
-  let deleteIndex = document.getElementById(`website${index}`);
+function listLatest(website) {
+  const entry = document.getElementById("latestSite");
+  entry.href = website.weblink;
+  entry.innerHTML = splitLink(website.weblink);
+}
+
+function deleteSite(website) {
+  alert(
+    `The website ${website.weblink} would get deleted from the database now. `
+  );
+
   // deleteOne with mongodb
+}
+
+function splitLink(link) {
+  return link.split(".")[1] + "." + link.split(".")[2];
 }

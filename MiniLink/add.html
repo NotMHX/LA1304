@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="./style.css" />
+
     <title>Add Site [MiniLink]</title>
   </head>
   <body>
@@ -17,6 +18,16 @@
     </header>
     <main>
       <div class="section">
+        <p class="sectionTitle">Name</p>
+        <input
+          class="sectionInput"
+          type="text"
+          id="nameInput"
+          minlength="3"
+          placeholder="My Favorite Restaurant"
+        />
+      </div>
+      <div class="section">
         <p class="sectionTitle">Page URL</p>
         <input
           class="sectionInput"
@@ -26,6 +37,7 @@
           placeholder="https://link.com"
         />
       </div>
+      <div class="section" id="resultBox"></div>
       <div class="section">
         <button
           class="sectionBtn"
@@ -33,9 +45,8 @@
         >
           Cancel
         </button>
-        <button class="sectionBtn" onclick="checkSite()">Check & Add!</button>
+        <button class="sectionBtn" id="addBtn">Check & Add!</button>
       </div>
-      <script src="javascript/addSite.js"></script>
     </main>
     <footer>
       <p class="footerDesc">Made by Michael, Luca and Dominik for LA1304</p>
@@ -46,5 +57,6 @@
         >Source Code</a
       >
     </footer>
+    <script src="./javascript/addSite.js" type="module"></script>
   </body>
 </html>

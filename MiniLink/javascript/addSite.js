@@ -29,14 +29,14 @@ function addSite() {
   // message that it has been added
   const resultText = document.createElement("p");
   resultText.className = "sectionDesc";
-  resultText.textContent = `The URL would be added to the JSON as following: Website title: ${name} Weblink: ${url} Created: ${date}`;
+  resultText.textContent = `The URL would be added to the database as following: Website title: ${name} Weblink: ${url} Created: ${date}`;
   newDiv.appendChild(resultText);
 }
 
 function formatDate() {
   let date = new Date();
   const day = date.toLocaleString("default", { day: "2-digit" });
-  const month = date.toLocaleString("default", { month: "short" });
+  const month = date.toLocaleString("default", { month: "2-digit" });
   const year = date.toLocaleString("default", { year: "numeric" });
-  return day + "-" + month + "-" + year;
+  return day + "/" + month + "/" + year;
 }

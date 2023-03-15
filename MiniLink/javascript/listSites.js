@@ -1,11 +1,25 @@
+document.getElementById("searchInput").addEventListener("input", async (e) => {
+  // Clear the div in order to load the new results
+  document.getElementById("list").innerHTML = "";
+
+  let value = e.target.value;
+  const webList = await fetchSites("search");
+
+  if (value != "") {
+    setList(
+      webList.filter((website) => {
+        return website.title.toLowerCase().includes(value);
+      })
+    );
+  } else {
+    return null;
+  }
+});
+
 async function fetchSites(page) {
   const response = await fetch("../websites.json");
   // replace this with the database
-  await console.log("fetch successful");
   const json = await response.json();
-  await console.log("conversion successful");
-  console.log(json);
-
   switch (page) {
     case "all":
       listSites(json);
@@ -14,15 +28,34 @@ async function fetchSites(page) {
       listLatest(json);
       break;
     case "search":
-      listSearch(json);
-      break;
+      return json;
     default:
       console.log("Not a valid page.");
       break;
   }
 }
 
-function listSearch(webList) {}
+function setList(webList) {
+  for (const website of webList) {
+    // creating a li element for each result item
+    const resultItem = document.createElement("li");
+
+    // adding a class to each item of the results
+    resultItem.className = "resultItem";
+
+    // grabbing the name of the current point of the loop and adding the name as the list item's text
+    const link = document.createElement("a");
+    link.href = website.weblink;
+    link.innerHTML = website.title;
+    link.target = "_blank";
+
+    // appending the text to the result item
+    resultItem.append(link);
+
+    // appending the result item to the list
+    document.getElementById("list").append(resultItem);
+  }
+}
 
 function listSites(webList) {
   const websiteContainer = document.getElementById("websiteList");

@@ -11,7 +11,7 @@ async function fetchSites(page) {
       listSites(json);
       break;
     case "index":
-      listLatest(json);
+      listLatest(json[json.length - 1]);
       break;
     case "search":
       listResults(json);

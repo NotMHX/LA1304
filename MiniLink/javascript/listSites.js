@@ -38,6 +38,7 @@ function listSites(webList) {
     // website name
     let websiteName = document.createElement("li");
     websiteName.innerHTML = `${webList[e].title}`;
+    websiteName.style = "font-weight: bold;";
     console.log(`Created title ${webList[e].title}`);
     list.append(websiteName);
 
@@ -67,7 +68,7 @@ function listSites(webList) {
 
   // if there's no entries
   if (websiteContainer.innerHTML == "") {
-    let errorText = document.createElement("p");
+    let errorText = document.createElement("h1");
     errorText.className = "sectionTitle";
     errorText.innerHTML = "No entries yet!";
     websiteContainer.append(errorText);

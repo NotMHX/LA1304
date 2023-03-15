@@ -14,7 +14,7 @@ async function fetchSites(page) {
       listLatest(json[json.length - 1]);
       break;
     case "search":
-      listResults(json);
+      listSearch(json);
       break;
     default:
       console.log("Not a valid page.");
@@ -22,7 +22,7 @@ async function fetchSites(page) {
   }
 }
 
-function listResults(webList) {}
+function listSearch(webList) {}
 
 function listSites(webList) {
   const websiteContainer = document.getElementById("websiteList");

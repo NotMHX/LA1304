@@ -1,3 +1,5 @@
+// This would be the ping command for the backend that we don't have.
+
 export function ping(ip) {
   return new Promise((resolve, reject) => {
     const xhr = new XMLHttpRequest();

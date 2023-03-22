@@ -22,8 +22,8 @@ async function main() {
     await listDatabases(client);
     var dbo = client.db("testdb");
 
-    var dele = { _id: "1" };
-    dbo.collection("orders").deleteOne(dele, function (err, res) {
+    var dele = { weblink: "https://www.chess.com/" };
+    dbo.collection("webList").deleteOne(dele, function (err, res) {
       if (err) throw err;
       console.log("1 document deleted");
     });

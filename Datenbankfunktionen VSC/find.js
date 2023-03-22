@@ -19,15 +19,14 @@ async function main() {
   try {
     await client.connect();
 
-    await listDatabases(client);
     var dbo = client.db("testdb");
 
     dbo
       .collection("orders")
-      .find({ _id: "1" })
+      .find({ weblink: "https://www.chess.com/" })
       .forEach((order) => console.log(order));
 
-    dbo.collection("orders").findOne({}, function (err, res) {
+    dbo.collection("webList").findOne({}, function (err, res) {
       if (err) throw err;
       console.log("1 document found:");
       console.log(res.name);

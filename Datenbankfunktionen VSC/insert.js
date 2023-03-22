@@ -18,11 +18,16 @@ async function main() {
 
   try {
     await client.connect();
+    var today = formatDate();
 
     await listDatabases(client);
     var dbo = client.db("testdb");
-    var myobj = { _id: "1", name: " Inc", address: " 37" };
-    dbo.collection("orders").insertOne(myobj, function (err, res) {
+    var myobj = {
+      title: "Schachspiel",
+      weblink: "https://www.chess.com/",
+      created: today,
+    };
+    dbo.collection("webList").insertOne(myobj, function (err, res) {
       if (err) throw err;
       console.log("1 document inserted");
     });
@@ -38,4 +43,12 @@ async function listDatabases(client) {
 
   console.log("Databases:");
   databasesList.databases.forEach((db) => console.log(` - ${db.name}`));
+}
+
+function formatDate() {
+  let date = new Date();
+  const day = date.toLocaleString("default", { day: "2-digit" });
+  const month = date.toLocaleString("default", { month: "2-digit" });
+  const year = date.toLocaleString("default", { year: "numeric" });
+  return day + "/" + month + "/" + year;
 }

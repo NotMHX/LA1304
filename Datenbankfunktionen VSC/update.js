@@ -22,9 +22,9 @@ async function main() {
     await listDatabases(client);
     var dbo = client.db("testdb");
 
-    var upda = { _id: "1" };
-    var newvalues = { $set: { name: "Mickey", address: "Canyon 123" } };
-    dbo.collection("orders").updateOne(upda, newvalues, function (err, res) {
+    var upda = { title: "Schachspiel" };
+    var newvalues = { $set: { title: "Schrottspiel" } };
+    dbo.collection("webList").updateOne(upda, newvalues, function (err, res) {
       if (err) throw err;
       console.log(`1 document updated: ${newvalues}`);
     });

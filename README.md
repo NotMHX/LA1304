@@ -4,7 +4,7 @@ This is a small link directory site where you can view and search for links that
 ### Tutorial
 You can open the index.html file to open the website. Use the buttons and inputs to navigate.
 
-# MongoDB (Backend)
+# Datenbankfunktionen VSC (Backend)
 ### Description
 There are a few node.js files that execute database commands.
 ### Tutorial

@@ -6,7 +6,7 @@ You can open the index.html file to open the website. Use the buttons and inputs
 
 # Datenbankfunktionen VSC (Backend)
 ### Description
-We didn't learn how to make a fully working backend for a website yet, so there are a few node.js files that execute database commands.  
+We didn't learn how to make a fully working backend for a website yet, so there are a few node.js files that execute database commands on their own.  
 ### Tutorial
 How to create a database on MongoDB Compass and Docker Desktop:
 (video)

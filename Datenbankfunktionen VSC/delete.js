@@ -30,7 +30,7 @@ async function main() {
         dbo.collection("orders").deleteOne(dele, function(err, res) {
 
           if (err) throw err;
-          console.log("1 document inserted");
+          console.log("1 document deleted");
           })
   } catch (e) {
       console.error(e);

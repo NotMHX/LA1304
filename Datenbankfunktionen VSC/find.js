@@ -33,7 +33,7 @@ async function main() {
       
             
           if (err) throw err;
-          console.log("1 document inserted");
+          console.log("1 document found:");
           console.log(res.name);
           })
      

@@ -31,7 +31,7 @@ async function main() {
         var newvalues = { $set: {name: "Mickey", address: "Canyon 123" } };
         dbo.collection("orders").updateOne(upda,newvalues, function(err, res) {
           if (err) throw err;
-          console.log("1 document inserted");
+          console.log(`1 document updated: ${newvalues}`);
           })
   } catch (e) {
       console.error(e);

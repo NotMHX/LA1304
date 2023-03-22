@@ -11,7 +11,7 @@ We didn't learn how to make a fully working backend for a website yet, so there 
 How to create a database on MongoDB Compass and Docker Desktop:
 (video)
 
-After doing that, put your connection string into the `link` variable in the files, then run `node (filename`.
+After doing that, put your connection string into the `link` variable in the files, then run `node (filename)`.
 
 
 

@@ -10,6 +10,8 @@ We didn't learn how to make a fully working backend for a website yet, so there 
 ### Tutorial
 How to create a database on MongoDB Compass and Docker Desktop:[Videolink](https://www.youtube.com/watch?v=EMKuM8hnfkA)
 
+After doing thst, put in the terminal this command  npm install mongodb, that you can use the database
+
 After doing that, put your connection string into the `link` variable in the files, then run `node (filename)`.
 
 

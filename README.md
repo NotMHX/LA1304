@@ -12,7 +12,7 @@ How to create a database on MongoDB Compass and Docker Desktop: [Videolink](http
 
 After doing that, put in the terminal this command  `npm install mongodb`, that you can use the database
 
-Last, put your connection string into the `link` variable in the files, then run `node (filename)` and voilà.
+Last, put your connection string into the `link` variable in all files, then run `node (filename)` and voilà.
 
 
 
